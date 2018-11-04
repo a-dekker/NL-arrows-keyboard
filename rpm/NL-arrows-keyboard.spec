@@ -6,7 +6,7 @@ Name:       NL-arrows-keyboard
 %{?qtc_builddir:%define _builddir %qtc_builddir}
 
 Summary:    NL-arrows-keyboard
-Version:    0.0.1
+Version:    0.0.2
 Release:    0
 Group:      System/GUI/Other
 License:    TBD
@@ -40,4 +40,4 @@ rm -rf %{buildroot}
 %{_datadir}/maliit/plugins/com/jolla/layouts/*
 
 %post
-killall maliit-server
+systemctl-user restart maliit-server.service
